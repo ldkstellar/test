@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+
+    <style>
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap');
+
+        *{font-family: 'Noto Serif KR', serif;
+        }
+        .mytitle {
+
+            width: 100%;
+
+            height: 300px;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://ifh.cc/g/fzCvrC.jpg");
+            background-position: center 50%;
+            background-size: cover;
+
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+.mypost{
+    width: 95%;
+            max-width: 500px;
+            margin: 20px auto 20px auto;
+
+            box-shadow: 0px 0px 3px 0px black;
+            padding: 20px;
+        }
+
+.mypost > button{
+    margin-top: 15px;
+}
+
+
+.mycard{
+    width: 95%;
+max-width: 500px;
+    margin: 20px auto 20px auto;
+
+}
+.card{
+    margin: 10px auto 10px auto;
+}
+
+
+
+
+
+    </style>
+<script>
+function save_comment(){
+     let name= $('#name').val()
+    let comment=$('#comment').val()
+    let temp_html= `<div class="card">
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>${comment}</p><!--html각주인데 html라인은 html각주를 사용해야한다-->
+                            <footer class="blockquote-footer">${name}</footer>
+                        </blockquote>
+                    </div>
+                </div>` //각주는 아마 html라인 안에서는 사용 할수 없다.
+alert('등록되었습니다.')
+    $('#cardbox').append(temp_html)
+
+
+
+
+
+}
+
+</script>
+
+</head>
+
+<body>
+<div class="mytitle">
+    <h2>한소희 팬명록</h2>
+
+
+</div>
+
+
+
+ <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="url">
+            <label for="floatingInput">닉네임</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="comment"
+                style="height: 100px"></textarea>
+            <label for="floatingTextarea2">응원댓글</label>
+
+    </div>
+     <button onclick="save_comment()" type="button" class="btn btn-dark">응원 남기기</button>
+        </div>
+
+
+<div class="mycard" id="cardbox">
+                <div class="card">
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>너무예뻐요!</p>
+                            <footer class="blockquote-footer">호빵맨</footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+
+                    <div class="card">
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>너무예뻐요!</p>
+                            <footer class="blockquote-footer">호빵맨</footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+
+                    <div class="card">
+
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>너무예뻐요!</p>
+                            <footer class="blockquote-footer">호빵맨</footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
